@@ -1,0 +1,402 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2f4f75;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: white;
+}
+
+/* Content Section */
+.content-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.content-section h1 {
+    font-weight: bold;
+    color: black;
+}
+
+.content-section p {
+    color: #6c757d;
+}
+
+/* Form Styles */
+.signup-container, .signin-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2f4f75;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #4c6a92;
+}
+
+/* Post Form and Table */
+.post_form {
+    margin-bottom: 20px;
+}
+
+#post_title, #post_content {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.post_btn, .update_btn {
+    padding: 12px;
+    background-color: #2f4f75;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.post_btn:hover, .update_btn:hover {
+    background-color: #4c6a92;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+html, body {
+    height: 100%; /* Ensure the height is set to 100% */
+  }
+
+  .navbar-brand {
+    color: blue !important;
+  }
+
+  .nav-link {
+    margin-right: 15px;
+  }
+
+  /* Styling for search inputs */
+  .search-input,
+  .search-input-large {
+    width: 250px;
+    border-radius: 25px;
+    padding: 10px;
+  }
+
+  .search-input-large {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn-custom {
+    margin-left: 10px;
+  }
+
+  /* Added styles for the new section */
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px;
+  }
+
+  .left-content {
+    flex: 1;
+    max-width: 60%;
+  }
+
+  .left-content a {
+    display: block;
+    margin-bottom: 10px;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .left-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .left-content p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .right-content {
+    flex: 0.4;
+  }
+
+  .right-content .search-input-large {
+    border-radius: 25px;
+  }
+
+  .trending-topic a {
+    color: blue;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  /* Styling for the Button Group */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .button-group .btn {
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .button-group .btn:hover {
+    background-color: #f0f0f0;
+    color: black;
+  }
+
+  /* Additional styles for customization */
+  .content-wrapper {
+    margin-top: 30px;
+  }
+
+  .content-wrapper .col {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  h5 {
+    color: blue;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .blog-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Left side of the card */
+  .blog-card .content {
+    max-width: 60%;
+  }
+
+  /* Right side of the card with rounded circle */
+  .blog-card .image-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #0066FF;
+    border-radius: 50%;
+  }
+
+  .blog-card .image-container::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  h5 {
+    color: #333;
+  }
+
+  .blog-card .info {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .blog-card .read-time {
+    font-size: 14px;
+    color: #007BFF;
+  }
+
+  /* Adjust the positioning of the Trending Topics */
+  .trending-topic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .button-group button {
+    margin: 5px;
+    background-color: #0066FF;
+    color: white;
+  }
+
+  .button-group button:hover {
+    background-color: #0044cc;
+  }
+  
+  .col-md-5 {
+    margin-right: 30px;
+  }
+
+  .trending-topic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+   
+  }
+
+  .button-group button {
+    background-color: #0066FF;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .button-group button:hover {
+    background-color: #0044cc;
+  }
+
+  .content-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .trending-topic {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 40px;
+background-color: #f8f9fa;
+border-radius: 8px;
+padding: 20px;
+text-align: center;
+}
+
+.button-group {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+.button-group .btn {
+border-radius: 25px;
+background-color: #8f8d8d;
+color: rgb(6, 6, 6);
+
+border: none;
+padding: 10px 20px;
+font-size: 1rem;
+}
+
+.button-group .btn:hover {
+background-color: #0044cc;
+}
+.button-group .btn {
+border-radius: 25px;
+background-color: white;
+color: black;
+border: 1px solid black; /* Black border */
+padding: 10px 20px;
+font-size: 1rem;
+transition: background-color 0.3s, color 0.3s;
+}
+
+.button-group .btn:hover {
+background-color: #f0f0f0; /* Light gray background on hover */
+color: black;
+border-color: black; /* Keep the black border on hover */
+}
+/* Delete button style (Red) */
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Delete button hover effect */
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+/* Update button style (Green) */
+.update-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+

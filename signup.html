@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Coranu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signup-container" id="signUp">
+        <h1>Welcome! Please Sign Up</h1>
+        <form id="auth-form">
+            <!-- Email Field -->
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your email" required>
+            </div>
+        
+            <!-- Password Field -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter your password" required>
+            </div>
+        
+            <!-- Full Name Field -->
+            <div class="input-group">
+                <label for="full_name">Full Name</label>
+                <input id="full_name" type="text" placeholder="Enter your full name" required>
+            </div>
+      
+            <!-- Button Group -->
+            <div class="button-group">
+                <button type="button" id="sign_up" class="btn">Sign Up</button>
+                <button type="button" id="sign_in" class="btn" onclick="window.location.href='signin.html'">Already have an account? Sign In</button>
+            </div>
+        </form>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

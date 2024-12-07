@@ -1,0 +1,231 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a full height for body and html to manage scroll behavior */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #1e3a8a; /* Dark blue */
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #4fd1c5; /* Light teal color on hover */
+}
+
+/* Main Content */
+.my_blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1; /* Allow the main content to take up remaining space */
+    padding: 20px;
+    overflow: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    flex: 1; /* Ensure it takes up the remaining space */
+}
+
+/* Post Form */
+.post_form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limit the width for the post form */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post_form:hover {
+    transform: translateY(-10px); /* Hover effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.post_form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #1e3a8a;
+}
+
+.post_form input,
+.post_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.post_form button {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post_form button:hover {
+    background-color: #4fd1c5; /* Light teal */
+    transform: scale(1.05);
+}
+
+.update_btn {
+    background-color: #ff6347; /* Tomato color */
+    display: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.update_btn.show {
+    display: inline-block;
+}
+
+.update_btn:hover {
+    background-color: #ff4500; /* Darker tomato */
+    transform: scale(1.05);
+}
+
+/* Table */
+.my_content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limit the table width */
+    overflow-x: auto;
+}
+
+.my_content h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f2f2f2; /* Hover effect for rows */
+}
+
+button.delete, button.update {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.delete:hover {
+    background-color: #ff4500;
+}
+
+button.update:hover {
+    background-color: #4fd1c5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
+.h1{
+    color: white;
+}

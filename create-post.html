@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Admin - Coranu</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert2 -->
+</head>
+<body>
+    <div class="my_blog">
+        <header>
+           <h1 class="h1">write your thoughts here</h1>
+        </header>
+        <div class="notifiy"></div>
+        <div class="container main">
+           <div class="main_content">
+                <!-- post form -->
+                <div class="post_form">
+                  <label >Title</label>
+                  <input type="text" id="title" placeholder="enter title">
+                  <label>Your Post</label>
+                  <textarea name="" id="post_content" cols="30" rows="10"></textarea>
+                  <button id="post_btn" class="post_btn">Post Now</button>
+                  <button id="update_btn" class="update_btn">Update Post</button>
+               </div>
+               <!-- table -->
+               <div class="my_content">
+                   <h2>My Posts</h2>
+                   <table>
+                      
+                   </table>
+               </div>
+           </div>
+        </div>
+        <footer>
+          <div class="footer_text">
+               <p>Have a nice Day!</p>
+          </div>
+        </footer>
+    </div>
+  
+    
+
+       
+    <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Coranu</b></a>
+            <div class="mx-auto" style="width: 400px;">
+                <form class="form-inline">
+                    <input class="form-control w-100" type="search" placeholder="Search..." aria-label="Search">
+                </form>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Market</a>
+                <a class="nav-item nav-link" href="#">Blog</a>
+                <a class="nav-item nav-link" href="#">Career</a>
+            </div>
+            <button class="btn btn-primary ml-3" onclick="window.location.href='signup.html'">Register</button>
+        </div>
+    </nav>
+
+    <div class="content-section text-center">
+        <div class="container mt-5">
+            <h1>Insights from Our Team</h1>
+            <p>Powerful Trading Tools and Features for Experienced Investors</p>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="container">
+        <div class="content-wrapper row">
+            <div class="col-md-6 col-12 left-content">
+                <a href="#">See Coronu Tutorial</a>
+                <h1>Insight from Our Team</h1>
+                <p>Powerful Trading Tools and Features for Experienced Investors</p>
+            </div>
+            <div class="col-md-4 col-12 right-content">
+                <input class="form-control search-input-large" type="search" placeholder="Search" aria-label="Search">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container mt-5">
+        <h2>Recent Blog Posts</h2>
+        <div id="posts-container" class="row">
+            <!-- Posts will be dynamically loaded here -->
+        </div>
+    </div>
+      <!-- Content Section -->
+  <div class="container">
+    <div class="content-wrapper row">
+      <div class="col-md-6 col-12 left-content">
+        <a href="#">See Coronu Tutorial</a>
+        <h1>Insight from Our Team</h1>
+        <p>Powerful Trading Tools and Features for Experienced Investors</p>
+      </div>
+      <div class="col-md-4 col-12 right-content">
+        <input class="form-control search-input-large" type="search" placeholder="Search" aria-label="Search">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="col">
+    <div class="trending-topic">
+      <h5>Trending Topics</h5>
+    </div>
+    <div class="button-group mt-3">
+      <button class="btn">Design Thinking</button>
+      <button class="btn">Technology</button>
+      <button class="btn">Web3</button>
+      <button class="btn">Programming</button>
+      <button class="btn">AI</button>
+    </div>
+  </div>
+
+  <div class="container content-section d-flex">
+    <div class="row">
+      <div class="col-3">
+        <h5>Blog Topics</h5>
+        <ul>
+          <li>Company Design</li>
+          <li>Technology</li>
+          <li>Crypto</li>
+          <li>Artificial Intelligence</li>
+          <li>Work</li>
+        </ul>
+        <h5>Guide & Tools</h5>
+        <ul>
+          <li>Guidelines</li>
+          <li>Mentorship</li>
+          <li>Tutorial</li>
+          <li>Training</li>
+          <li>Career</li>
+          <li>Self Care</li>
+        </ul>
+      </div>
+  
+      <div class="col-8">
+        <div class="blog-card mt-3">
+          <div class="content">
+            <h5>Powerful Trading Tools and Features for Experienced Investors</h5>
+            <p class="info">By Mark Tuchel</p>
+            <p>I'm always trying to think of new and interesting business ideas. I generally try to come up with ideas by thinking of what I would want to do or see in the world...</p>
+            <p class="read-time">7 min read</p>
+          </div>
+          <div class="image-container"></div>
+        </div>
+      </div>
+      
+      <div class="col-8">
+        <div class="blog-card mt-3">
+          <div class="content">
+            <h5>Powerful Trading Tools and Features for Experienced Investors</h5>
+            <p class="info">By Mark Tuchel</p>
+            <p>I'm always trying to think of new and interesting business ideas. I generally try to come up with ideas by thinking of what I would want to do or see in the world...</p>
+            <p class="read-time">7 min read</p>
+          </div>
+          <div class="image-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+
+        // Firebase Configuration (replace with your own)
+        const firebaseConfig = {
+            apiKey: "AIzaSyBRfJSEEcElzLRV8N0z619EmEci3sxjihU",
+            authDomain: "blog-hakathon.firebaseapp.com",
+            projectId: "blog-hakathon",
+            storageBucket: "blog-hakathon.appspot.com",
+            messagingSenderId: "442281738727",
+            appId: "1:442281738727:web:b252c6eb463fa412627d42",
+            measurementId: "G-1WJVY9XQ9Q"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Fetch posts from Firebase and display them
+        function getPosts() {
+            const postsRef = ref(db, 'post/');
+            get(postsRef)
+                .then(snapshot => {
+                    const postsContainer = document.getElementById('posts-container');
+                    const data = snapshot.val();
+                    postsContainer.innerHTML = ""; // Clear previous posts
+
+                    if (data) {
+                        for (const key in data) {
+                            const { title, post_content } = data[key];
+
+                            // Create a new post card
+                            const postCard = document.createElement('div');
+                            postCard.classList.add('col-md-4', 'col-12', 'blog-card');
+                            postCard.innerHTML = `
+                                <div class="content">
+                                    <h5>${title}</h5>
+                                    <p>${post_content}</p>
+                                    <button class="btn btn-primary">Read More</button>
+                                </div>
+                            `;
+
+                            // Append the post card to the container
+                            postsContainer.appendChild(postCard);
+                        }
+                    } else {
+                        postsContainer.innerHTML = "<p>No posts available.</p>";
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching posts: ", error);
+                });
+        }
+
+        // Load posts when the page loads
+        window.onload = getPosts;
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
